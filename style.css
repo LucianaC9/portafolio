@@ -471,3 +471,47 @@ EFECTO LUZ DEL RATÓN
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
 }
+
+/* ==========================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Acomodamos la barra de navegación */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Achicamos el título principal */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    /* Reducimos los márgenes de las secciones */
+    section {
+        margin: 50px auto;
+    }
+    
+    /* Hacemos que los proyectos y skills ocupen todo el ancho (1 columna) */
+    .grid-proyectos, .grid-skills {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Acomodamos las tarjetas de experiencia */
+    .resume-item {
+        border-left: none;
+        border-top: 4px solid #58a6ff;
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* Apagamos el efecto de luz en celulares (porque no hay ratón) */
+    .cursor-glow {
+        display: none;
+    }
+}
